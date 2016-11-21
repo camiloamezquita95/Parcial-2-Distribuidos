@@ -1,0 +1,12 @@
+web:
+  build: ./Web/
+  ports:
+    - "80:80"
+  links:
+    - postgres:postgres
+
+postgres:
+  build: ./Database/
+  ports:
+    - "5433:5432"
+  
